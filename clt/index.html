@@ -1,0 +1,29 @@
+<!doctype html>
+<html manifest="todo.manifest" ng-app="todoApp">
+<head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<meta name="viewport" 
+      content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Listas</title>
+</head>
+<body ng-controller="todoListCtrl">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header pull-left">
+            <a class="navbar-brand" href="#">
+            <i class="fa fa-lg fa-check-square-o"></i>
+            Listas
+            </a>
+        </div>
+        <button type="button" class="btn {{state.cls}} navbar-btn pull-right">
+            {{state.msg}}
+        </button>
+    </div>
+</nav>
+<div ng-view></div>
+</body>
+<script src="js/angular.min.js">
+</script>
+<script src="js/todo.js"></script>
+</html>

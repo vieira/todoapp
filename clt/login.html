@@ -1,0 +1,71 @@
+<!doctype html>
+<html ng-app="loginApp">
+<head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<style>
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f8f8f8;
+}
+
+.form-signin {
+  max-width: 400px;
+  padding: 30px;
+  margin: 0 auto;
+  background-color:white;
+  border:1px solid #e7e7e7;
+  border-radius:10px;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+#email {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+</style>
+<meta name="viewport" 
+      content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Identify yourself, human</title>
+</head>
+<body ng-controller="loginCtrl">
+<div class="container">
+    <form role="form" ng-submit="login(user)" class="form-signin">
+        <h2 class="form-signin-heading">Identify yourself, human</h2>
+        <input class="input-lg form-control" id="email" ng-model="user.name"
+               placeholder="username" required autofocus>
+        <input class="input-lg form-control" id="password" ng-model="user.pass"
+               type="password" placeholder="password" required>
+        <button type="submit" class="btn {{state}} btn-lg btn-block">
+            Sign in
+        </button>
+    </form>
+</div>
+<script src="js/angular.min.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

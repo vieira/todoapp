@@ -1,0 +1,17 @@
+CACHE MANIFEST
+
+css/bootstrap.min.css
+css/font-awesome.min.css
+js/angular.min.js
+js/todo.js
+fonts/fontawesome-webfont.woff
+lists.html
+items.html
+
+NETWORK:
+login/
+login.html
+share.html
+*
+
+# 2014-05-28 17:23
